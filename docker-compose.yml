@@ -1,0 +1,21 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+  bot:
+    build: ./telegram-bot
+    environment:
+      TELEGRAM_BOT_TOKEN: your_bot_token
+      ALERT_CHAT_ID: your_channel_id
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
