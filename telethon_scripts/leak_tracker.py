@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 api_id = 'YOUR_API_ID'
 api_hash = 'YOUR_API_HASH'
-client = TelegramClient('session_name', api_id, api_hash)
+client = TelegramClient('session_name', 21708825,3061289a263e2795312da490a12b456c)
 
 mongo = MongoClient("mongodb://localhost:27017/")
 db = mongo['leakdb']
